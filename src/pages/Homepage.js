@@ -9,7 +9,6 @@ const HomePage = () => {
            <Navbar/>
            <Link to="/card">Card</Link>
         </div>
-        
     )
 }
 export default HomePage;
