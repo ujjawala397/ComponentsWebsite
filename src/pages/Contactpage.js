@@ -1,11 +1,13 @@
 import React from 'react';
 import Navbar from '../components/Navbar/Navbar';
+import Qard from '../components/Qards/Qard';
 
 const ContactPage = () => {
     return(
         <div>
             <Navbar/>
-            Contact us
+            <Qard/>
+            
         </div>
     )
 }

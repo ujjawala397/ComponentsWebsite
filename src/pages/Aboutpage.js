@@ -5,7 +5,13 @@ const AboutPage = () => {
     return(
         <div>
             <Navbar/>
-            AboutPage
+            <div>AboutPage</div>
+            <div>AboutPage</div>
+            <div>AboutPage</div>
+            <div>AboutPage</div>
+            <div>AboutPage</div>
+            <div>AboutPage</div>
+            <div>AboutPage</div>
         </div>
     )
 }

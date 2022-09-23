@@ -1,9 +1,10 @@
-import { AppBar, Button, Card,CardContent, CardMedia, IconButton, Toolbar, Typography } from '@mui/material';
-import { display, Stack } from '@mui/system';
+import { AppBar, Button, CardMedia, IconButton, Toolbar, Typography } from '@mui/material';
+import { Stack } from '@mui/system';
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './Navbar.css';
 
+import Text from './text';
 const Navbar = () => {
     return (
         
@@ -23,11 +24,13 @@ const Navbar = () => {
                 </IconButton>
                 <Typography variant='h6' component='div' sx={{flexGrow:1}}>
                   Components Made By Me
+                  
                 </Typography>
+                <Text/>
                 <Stack direction="row" spacing={2}>
                   <Button color='inherit'> <Link to="/" style={{ textDecoration: 'none' }}>Home</Link></Button>
                   <Button color='inherit'> <Link to="/about" style={{ textDecoration: 'none' }}>About</Link></Button>
-                  <Button color='inherit'> <Link to="/card" style={{ textDecoration: 'none' }}>Contact</Link></Button>
+                  <Button color='inherit'> <Link to="/contact" style={{ textDecoration: 'none' }}>Contact</Link></Button>
                 </Stack>
               </Toolbar>
 
