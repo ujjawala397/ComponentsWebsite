@@ -7,6 +7,7 @@ import Todo from './components/TodoApp/Todo';
 import {Route, Routes} from 'react-router-dom';
 import SetStateFunction from './components/SetState/SetStateFunction';
 import SetStateClass from './components/SetState/SetStateClass';
+import SetStateClick from './components/SetState/SetStateClick';
 
 
 const App = () =>{
@@ -21,6 +22,7 @@ const App = () =>{
           <Route path="/todoApp" element={<Todo/>}/>
           <Route path="/setStateClass" element={<SetStateClass/>}/>
           <Route path='/setStateFunction' element={<SetStateFunction/>}/>
+          <Route path='/setStateOnClick' element={<SetStateClick/>}/>
         </Routes>
     
     </div>
