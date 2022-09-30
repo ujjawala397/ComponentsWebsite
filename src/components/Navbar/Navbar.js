@@ -4,7 +4,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './Navbar.css';
 
-import Text from './text';
+
 const Navbar = () => {
     return (
         
@@ -26,11 +26,11 @@ const Navbar = () => {
                   Components Made By Me
                   
                 </Typography>
-                <Text/>
+                
                 <Stack direction="row" spacing={2}>
-                  <Button color='inherit'> <Link to="/" style={{ textDecoration: 'none' }}>Home</Link></Button>
-                  <Button color='inherit'> <Link to="/about" style={{ textDecoration: 'none' }}>About</Link></Button>
-                  <Button color='inherit'> <Link to="/contact" style={{ textDecoration: 'none' }}>Contact</Link></Button>
+                  <Button color='inherit'> <Link to="/" style={{ textDecoration: 'none', color:'white' }}>Home</Link></Button>
+                  <Button color='inherit'> <Link to="/about" style={{ textDecoration: 'none', color:'white' }}>About</Link></Button>
+                  <Button color='inherit'> <Link to="/contact" style={{ textDecoration: 'none', color:'white' }}>Contact</Link></Button>
                 </Stack>
               </Toolbar>
 

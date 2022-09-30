@@ -1,4 +1,6 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+import { Stack } from '@mui/system';
 import Navbar from '../components/Navbar/Navbar';
 
 
@@ -6,12 +8,18 @@ const HomePage = () => {
     return (
         <div>
            <Navbar/>
-           <div style={{position:"fixed"}}>rtet</div>
+           <Stack style={{position:'absolute'}}>hii</Stack>
            <div>rtet</div>
            <div>rtet</div>
            <div>rtet</div>
            <div>rtet</div>
            <div>rtet</div>
+            <div>
+                <li><Link to="setStateClass">OnChange State will change By class</Link></li>
+                <li><Link to="setStatefunction">OnChange State will change by function</Link></li>
+                <li><Link to="card">Card</Link></li>
+                <li><Link to="todoApp">Todo App</Link></li>
+            </div>
            
         </div>
     )
