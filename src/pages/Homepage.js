@@ -17,7 +17,7 @@ const HomePage = () => {
             <div>
                 <li><Link to="setStateClass">OnChange State will change By class</Link></li>
                 <li><Link to="setStatefunction">OnChange State will change by function</Link></li>
-                <li><Link to="setStateOnClick">OnClick State will change by function</Link></li>
+                <li><Link to="setStateOnClick">OnClick State will change by function(incomplete)</Link></li>
                 <li><Link to="card">Card</Link></li>
                 <li><Link to="todoApp">Todo App</Link></li>
             </div>
