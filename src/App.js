@@ -8,6 +8,7 @@ import {Route, Routes} from 'react-router-dom';
 import SetStateFunction from './components/SetState/SetStateFunction';
 import SetStateClass from './components/SetState/SetStateClass';
 import SetStateClick from './components/SetState/SetStateClick';
+import StateDataTraverse from './components/SetState/StateDataTraverse';
 
 
 const App = () =>{
@@ -23,6 +24,7 @@ const App = () =>{
           <Route path="/setStateClass" element={<SetStateClass/>}/>
           <Route path='/setStateFunction' element={<SetStateFunction/>}/>
           <Route path='/setStateOnClick' element={<SetStateClick/>}/>
+          <Route path='/stateDataTraverse' element={<StateDataTraverse/>}/>
         </Routes>
     
     </div>
