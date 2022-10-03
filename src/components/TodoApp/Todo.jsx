@@ -44,7 +44,7 @@ const Todo = () => {
             <div>
               {items.map((item,index)=>(
                 <div key={index}>
-                   {item} <Button onClick={()=>removeItem(index)}> Delete</Button>
+                   {index+1} {item} <Button onClick={()=>removeItem(index)}> Delete</Button>
 
                 </div>
               ))}
