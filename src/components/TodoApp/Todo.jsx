@@ -51,6 +51,7 @@ const Todo = () => {
             </div>
             
             <Button onClick={removeAllItems}>Remove All</Button>
+            
         </form>
 
     </div>
