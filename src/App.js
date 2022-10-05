@@ -9,6 +9,7 @@ import SetStateFunction from './components/SetState/SetStateFunction';
 import SetStateClass from './components/SetState/SetStateClass';
 import SetStateClick from './components/SetState/SetStateClick';
 import StateDataTraverse from './components/SetState/StateDataTraverse';
+import HitApi from './components/Api/HitApi';
 
 
 const App = () =>{
@@ -25,6 +26,7 @@ const App = () =>{
           <Route path='/setStateFunction' element={<SetStateFunction/>}/>
           <Route path='/setStateOnClick' element={<SetStateClick/>}/>
           <Route path='/stateDataTraverse' element={<StateDataTraverse/>}/>
+          <Route path='/hitApi' element={<HitApi/>}/>
         </Routes>
     
     </div>

@@ -21,6 +21,7 @@ const HomePage = () => {
                 <li><Link to="stateDataTraverse">Map Travere on state data</Link></li>
                 <li><Link to="card">Card</Link></li>
                 <li><Link to="todoApp">Todo App</Link></li>
+                <li><Link to="hitApi">Hit Api</Link></li>
             </div>
            
         </div>
