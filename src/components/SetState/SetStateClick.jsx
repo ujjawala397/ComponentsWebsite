@@ -4,12 +4,16 @@ import { Link } from 'react-router-dom';
 
 
 function SetStateClick() {
-    const [data,setData]=useState({});
-    
+    const [data,setData]=useState([]);
+    const [res,setRes]=useState([]);
     function handleSubmit(e){
         e.preventDefault();
-        console.log(`${data.listItem}`)
-        //How to Show div?
+        console.log(data)
+        //How to Show div? 
+        // Task done below
+    }
+    function addData(){
+        setRes(data)
     }
     
     return (
@@ -18,10 +22,13 @@ function SetStateClick() {
                 <Link to="/">Home</Link>
             </div>
             <form onSubmit={handleSubmit}>
-                <Input onChange={(e)=>{ setData ({ listItem:e.target.value }) }}/>
-                <Button type="submit">Submit</Button>
+                <Input onChange={(e)=>{ setData([e.target.value])}}/>
+                <Button type="submit" onClick={addData}>Submit</Button>
             </form>
-              
+            
+            {res.map((data,index)=>(
+                <div key={index}>{data}</div>
+            ))}
     </div>
   )
 }
