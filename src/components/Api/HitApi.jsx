@@ -6,15 +6,21 @@ const HitApi = () => {
     useEffect(()=>{
         fetch('https://jsonplaceholder.typicode.com/users')
         .then(response=>response.json())
-        .then(response=>setUsers(JSON.stringify(response)))
+        .then(response=>setUsers(response))
     },[])
     
   return (
     <div> 
-      {users}
-      {/* {users.map(buddy=>(
-        <h1 key={buddy.id}>{buddy.name}</h1>
-      ))} */}
+      {users.map(user=>(
+        <div key={user.id}>
+          <h1>
+            {user.id} Name: {user.name}
+          </h1>
+          <h4>Contact: {user.phone}</h4>
+          <br></br>
+        </div>
+        
+      ))}
 
     </div>
   )
