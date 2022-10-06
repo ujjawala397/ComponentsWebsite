@@ -8,7 +8,7 @@ const Todo = () => {
       
         
         <div>
-            <Link to="/">Go back</Link>
+            <Link to="/">Home</Link>
         </div>
         <input placeholder='enter string' value={data.listItem} onChange={(e)=>(setData({...data,listItem:e.target.value}))} />
         <div>  You wrote : {data.listItem} </div>

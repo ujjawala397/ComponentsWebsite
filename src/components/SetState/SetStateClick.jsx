@@ -15,7 +15,7 @@ function SetStateClick() {
     return (
         <div>
             <div>
-                <Link to="/">Go back</Link>
+                <Link to="/">Home</Link>
             </div>
             <form onSubmit={handleSubmit}>
                 <Input onChange={(e)=>{ setData ({ listItem:e.target.value }) }}/>

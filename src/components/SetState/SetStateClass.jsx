@@ -14,7 +14,7 @@ class SetStateClass extends Component {
     return (
         <div>
             <div>
-                <Link to="/">Go Back</Link>
+                <Link to="/">Home</Link>
             </div>
             <div>Hi! My name is {this.state.name}</div>
             <Input onChange={(e)=>this.setState({name:e.target.value})} />

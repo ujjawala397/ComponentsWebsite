@@ -25,7 +25,7 @@ function StateDataTraverse() {
   return (
     <div>
 
-        <Link to="/">Go back</Link>
+        <Link to="/">Home</Link>
         {data.people.map(buddy=>(
         <h1 key={buddy.id}>{buddy.name}</h1>
     ))}

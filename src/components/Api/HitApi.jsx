@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import {useEffect} from 'react';
+import { Link } from 'react-router-dom';
 const HitApi = () => {
 
     const [users,setUsers]=useState([])
@@ -11,6 +12,7 @@ const HitApi = () => {
     
   return (
     <div> 
+      <Link to="/">Home</Link>
       {users.map(user=>(
         <div key={user.id}>
           <h1>
