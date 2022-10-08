@@ -25,7 +25,6 @@ function SetStateClick() {
                 <Input onChange={(e)=>{ setData([e.target.value])}}/>
                 <Button type="submit" onClick={addData}>Submit</Button>
             </form>
-            
             {res.map((data,index)=>(
                 <div key={index}>{data}</div>
             ))}
