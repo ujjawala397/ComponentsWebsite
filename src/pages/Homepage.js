@@ -22,7 +22,7 @@ const HomePage = () => {
                 <li><Link to="card">Card</Link></li>
                 <li><Link to="todoApp">Todo App</Link></li>
                 <li><Link to="hitApi">Hit Api</Link></li>
-                <li><Link to="signin">SignIn</Link></li>
+                <li><Link to="signin">SignIn with google</Link></li>
                 <li><Link to="signup">SignUp</Link></li>
             </div>
            
