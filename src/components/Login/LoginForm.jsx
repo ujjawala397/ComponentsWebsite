@@ -12,8 +12,13 @@ const LoginForm = () => {
     }
     const responseSucessGoogle = (response) => {
         console.log(response)
+        const name=response.user.displayName;
+        const pic=response.user.photoURL;
+        localStorage.setItem("Name", name)
+        localStorage.setItem("pic", pic)
     }
     const responseFailureGoogle = (response) => {
+        console.log("error")
         console.log(response)
     }
     return (
@@ -32,6 +37,8 @@ const LoginForm = () => {
                 onFailure={responseFailureGoogle}
                 cookiePolicy={'single_host_origin'}
             />
+            <h1>{localStorage.getItem("name")}</h1>
+            <img src={localStorage.getItem("pic")} alt="no img" />
         </form>
     </div>
   )
