@@ -12,14 +12,21 @@ import StateDataTraverse from './components/SetState/StateDataTraverse';
 import HitApi from './components/Api/HitApi';
 import LoginForm from './components/Login/LoginForm';
 import SignupForm from './components/Login/SignupForm';
+import { useState } from 'react';
 
 
 const App = () =>{
+
+  const [user,setLoginUser]=useState({})
   return(
     <div>
       
         <Routes>
-          <Route path="/" element={<HomePage/>}/> 
+          <Route exact path="/" element={
+            user && user._id ?
+            <HomePage/>:
+            <LoginForm setLoginUser={setLoginUser}/>
+            }/> 
           <Route path="/contact" element={<ContactPage/>}/>
           <Route path="/about" element={<AboutPage/>}/>
           <Route path="/card" element={<Qard/>}/>
@@ -29,7 +36,9 @@ const App = () =>{
           <Route path='/setStateOnClick' element={<SetStateClick/>}/>
           <Route path='/stateDataTraverse' element={<StateDataTraverse/>}/>
           <Route path='/hitApi' element={<HitApi/>}/>
-          <Route path='/signin' element={<LoginForm/>} />
+          <Route path='/signin' element={
+            <LoginForm setLoginUser={setLoginUser}/>
+            } />
           <Route path='/signup' element={<SignupForm/>} />
         </Routes>
     

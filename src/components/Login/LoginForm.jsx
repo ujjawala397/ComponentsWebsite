@@ -1,26 +1,37 @@
 import { Input,Button } from '@mui/material';
 import React from 'react'
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-import GoogleLogin from 'react-google-login';
-const LoginForm = () => {
+import { Link ,useNavigate} from 'react-router-dom';
+import axios from "axios";
+const LoginForm = ({setLoginUser}) => {
   
-    const [data,setData]=useState({name:''});
+    const navigate=useNavigate()
+    const [data,setData]=useState({
+        email:"",
+        pass:""
+    });
 
-    function handleSubmit(){
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+        console.log(data)
+        const {name, value}=e.target
+        setData({
+            ...data,
+            [name]:value
+        })
         
     }
-    const responseSucessGoogle = (response) => {
-        console.log(response)
-        const name=response.user.displayName;
-        const pic=response.user.photoURL;
-        localStorage.setItem("Name", name)
-        localStorage.setItem("pic", pic)
+
+    const login=()=>{
+        axios.post("http://localhost:5000/login",data)
+        .then(res=>{
+            alert(res.data.message + res.data.user._id)
+            setLoginUser(res.data.user)
+            navigate('/')
+        })
+
     }
-    const responseFailureGoogle = (response) => {
-        console.log("error")
-        console.log(response)
-    }
+
     return (
     <div>
         <Link to="/">Home</Link>
@@ -29,16 +40,10 @@ const LoginForm = () => {
             <br></br>
             <Input placeholder='Enter password' type="password" onChange={(e)=>(setData({...data,pass:e.target.value}))}/>
             <br></br>
-            <Button type ="submit">Login</Button>
-            <GoogleLogin
-                clientId="1005337760285-v3kctt2qg09vukhkkt1amftftde5v932.apps.googleusercontent.com"
-                buttonText="Login"
-                onSuccess={responseSucessGoogle}
-                onFailure={responseFailureGoogle}
-                cookiePolicy={'single_host_origin'}
-            />
-            <h1>{localStorage.getItem("name")}</h1>
-            <img src={localStorage.getItem("pic")} alt="no img" />
+            <Button type ="submit" onClick={login}>Login</Button>
+            <Button onClick={()=> navigate('/signup')}>Register</Button>
+            
+            
         </form>
     </div>
   )
