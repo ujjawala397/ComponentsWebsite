@@ -13,14 +13,15 @@ import HitApi from './components/Api/HitApi';
 import LoginForm from './components/Login/LoginForm';
 import SignupForm from './components/Login/SignupForm';
 import { useState } from 'react';
+import { GoogleOAuthProvider } from '@react-oauth/google';
 
 
 const App = () =>{
 
   const [user,setLoginUser]=useState({})
   return(
-    <div>
-      
+    <GoogleOAuthProvider clientId={`${process.env.REACT_APP_GOOGLE_CLIENT_ID}`}>
+      <div>
         <Routes>
           <Route exact path="/" element={
             user && user._id ?
@@ -42,7 +43,8 @@ const App = () =>{
           <Route path='/signup' element={<SignupForm/>} />
         </Routes>
     
-    </div>
+      </div>
+    </GoogleOAuthProvider>
   )
 }
 export default App;
